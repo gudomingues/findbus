@@ -1,0 +1,14 @@
+.info {
+  position: absolute;
+  z-index: 10000;
+  top: 53%;
+  left: 35%;
+  min-width: 400px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(32, 32, 32, 0.925);
+  color: rgb(223, 223, 223);
+  border: 1px solid rgb(87, 87, 87);
+  box-shadow: 0 0 1em rgb(99, 99, 99);
+}

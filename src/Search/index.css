@@ -1,0 +1,47 @@
+.cards {
+  max-height: 80rem;
+  max-width: 80rem;
+}
+.info {
+  margin-top: 10px;
+  border-radius: 10px black;
+}
+.text {
+  font-family: "Rubik", sans-serif; /*titulo*/
+  font-size: medium;
+}
+.seach-input {
+  text-align: center;
+  border-radius: black;
+}
+.seach-input input {
+  padding: 32px;
+  height: 4rem;
+}
+
+.nav-items {
+  font-family: "Rubik", sans-serif; /*nav bar links*/
+  font-size: 16px;
+}
+.nav-lin:hover {
+  color: white;
+}
+.nav-lin {
+  color: #fdc600;
+  font-size: 1.2rem;
+  margin-right: 80px;
+}
+.container-ixib {
+  position: relative;
+}
+.exibir {
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ops {
+  font-family: "Rubik", sans-serif;
+  color: red;
+}
