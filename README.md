@@ -19,7 +19,7 @@ FindBus é uma aplicação web moderna para consultar informações em tempo rea
 
 ## 🚀 Demo
 
-Acesse: [https://SEU_USUARIO.github.io/findbus/](https://SEU_USUARIO.github.io/findbus/)
+Acesse: [https://gudomingues.github.io/findbus/](https://gudomingues.github.io/findbus/)
 
 ## 🛠️ Tecnologias
 
