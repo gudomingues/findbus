@@ -1,0 +1,71 @@
+/* LineView CSS */
+.line-view {
+  padding: 1.5rem;
+}
+
+.line-view-header {
+  margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.line-details {
+  animation: slideIn 0.3s ease-out;
+}
+
+.map-wrapper {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.stops-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.stop-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.stop-item:last-child {
+  border-bottom: none;
+}
+
+.vehicles-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.vehicle-item {
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.vehicle-item:hover {
+  transform: scale(1.02);
+}
+
+.vehicle-details dl {
+  font-size: 0.9rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

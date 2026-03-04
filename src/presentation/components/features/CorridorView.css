@@ -1,0 +1,105 @@
+/* CorridorView CSS */
+
+.corridor-view {
+  padding: 1rem 0;
+}
+
+.corridor-view-header {
+  margin-bottom: 1.5rem;
+}
+
+.corridors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.corridor-card {
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.corridor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.corridor-name {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Speed Gauge */
+.speed-gauge {
+  position: relative;
+}
+
+.speed-gauge-bar {
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.speed-gauge-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}
+
+.speed-gauge-value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.speed-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.speed-unit {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.speed-status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .corridors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .speed-number {
+    font-size: 1.75rem;
+  }
+
+  .corridor-name {
+    font-size: 0.9rem;
+    min-height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .corridor-view-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .speed-number {
+    font-size: 1.5rem;
+  }
+}

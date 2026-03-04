@@ -1,0 +1,246 @@
+/* Map Component Styles */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Legend */
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[data-theme="dark"] .map-legend {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #212529;
+}
+
+[data-theme="dark"] .legend-item {
+  color: #c9d1d9;
+}
+
+.legend-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Ícone de Parada - Pin Vermelho */
+.legend-icon.stop {
+  background-color: #dc3545;
+  border: 2px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.4);
+}
+
+.legend-icon.stop::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+/* Ícone de Veículo - Círculo Azul */
+.legend-icon.vehicle {
+  background-color: #0d6efd;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.4);
+}
+
+.legend-icon.vehicle::after {
+  content: 'V';
+  transform: none;
+  background: none;
+  width: auto;
+  height: auto;
+  font-size: 11px;
+}
+
+/* Ícone Acessível - Círculo Verde */
+.legend-icon.accessible {
+  background-color: #198754;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(25, 135, 84, 0.4);
+}
+
+.legend-icon.accessible::after {
+  content: 'A';
+  transform: none;
+  background: none;
+  width: auto;
+  height: auto;
+  font-size: 11px;
+}
+
+/* Markers */
+.custom-marker {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-marker:hover {
+  transform: scale(1.2);
+  z-index: 1000;
+}
+
+/* Stop Marker - Pin Vermelho estilo Google Maps */
+.custom-marker.stop .marker-icon {
+  width: 17px;
+  height: 17px;
+  background-color: #dc3545;
+  border: 2px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.5);
+  position: relative;
+}
+
+.custom-marker.stop .marker-icon::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.custom-marker.stop:hover .marker-icon {
+  background-color: #c82333;
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.7);
+  animation: bounce 0.5s ease;
+}
+
+/* Vehicle Marker - Círculo Azul */
+.custom-marker.vehicle .marker-icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: bold;
+  color: white;
+  background-color: #0d6efd;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.custom-marker.vehicle:hover .marker-icon {
+  background-color: #0b5ed7;
+  transform: scale(1.15);
+  box-shadow: 0 3px 10px rgba(13, 110, 253, 0.7);
+}
+
+/* Badge de Acessibilidade */
+.accessible-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #198754;
+  color: white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7px;
+  font-weight: bold;
+  border: 1.5px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+  }
+
+  .map-legend {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .legend-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+
+  .custom-marker.stop .marker-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .custom-marker.vehicle .marker-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}

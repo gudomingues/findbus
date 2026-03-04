@@ -1,0 +1,27 @@
+/* SearchBar CSS */
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.search-bar .input-group-text {
+  color: #6c757d;
+}
+
+.search-bar .form-control {
+  border-left: 0;
+}
+
+.search-bar .form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.search-bar .input-group-text,
+.search-bar .form-control {
+  border-color: #dee2e6;
+}
+
+.search-bar .input-group:focus-within .input-group-text,
+.search-bar .input-group:focus-within .form-control {
+  border-color: #86b7fe;
+}

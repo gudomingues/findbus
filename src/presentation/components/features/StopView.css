@@ -1,0 +1,79 @@
+/* StopView CSS */
+.stop-view {
+  padding: 1.5rem;
+}
+
+.stop-view-header {
+  margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.stop-details {
+  animation: slideIn 0.3s ease-out;
+}
+
+.prediction-line {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background-color: #f8f9fa;
+}
+
+.prediction-line-header {
+  margin-bottom: 0.5rem;
+}
+
+.arrivals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.arrival-item {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: left;
+  transition: all 0.2s;
+  border-width: 2px;
+}
+
+.arrival-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrival-time {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.arrival-details dl {
+  font-size: 0.9rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .stop-view,
+  .line-view {
+    padding: 1rem;
+  }
+}
