@@ -5,7 +5,10 @@ import { PositionService } from './positionService';
 import { PredictionService } from './predictionService';
 import { CorridorService } from './corridorService';
 
-const API_BASE_URL = '/api';
+// Use proxy em desenvolvimento, URL direta em produção
+const API_BASE_URL = process.env.NODE_ENV === 'development' 
+  ? '/api' 
+  : 'https://api.olhovivo.sptrans.com.br/v2.1';
 
 class ServiceFactory {
   private static instance: ServiceFactory;

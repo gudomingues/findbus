@@ -36,7 +36,11 @@ export class HttpClient implements IHttpClient {
     this.client = axios.create({
       baseURL,
       timeout: API_CONFIG.TIMEOUT,
-      withCredentials: true,
+      withCredentials: false,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
     });
 
     this.setupInterceptors();
