@@ -153,8 +153,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👤 Autor
 
-Seu Nome
-- GitHub: [@SEU_USUARIO](https://github.com/SEU_USUARIO)
+- GitHub: [@gudomingues](https://github.com/gudomingues)
 
 ## 🙏 Agradecimentos
 
